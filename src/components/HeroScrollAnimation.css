@@ -308,7 +308,8 @@
   .hero-content-fixed {
     padding: 0;
     align-items: flex-end;
-    padding-bottom: 0;
+    padding-bottom: 40px;
+    /* Levanta o card um pouco */
   }
 
   .hero-card {
@@ -351,7 +352,13 @@
     padding: 11px 12px;
   }
 
+  /* Reativa e reposiciona o scroll indicator para o topo no mobile */
   .scroll-indicator {
-    display: none;
+    display: flex;
+    top: 20px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
   }
 }
