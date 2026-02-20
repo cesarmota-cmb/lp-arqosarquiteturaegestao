@@ -76,7 +76,7 @@ const HeroScrollAnimation = () => {
     return () => window.removeEventListener('scroll', handleHeroVisibility);
   }, []);
 
-  // Animação baseada em scroll
+  // Animação baseada em scroll — RAF + Lerp + Frame Blending
   useEffect(() => {
     if (!imagesLoaded) return;
 
@@ -92,47 +92,67 @@ const HeroScrollAnimation = () => {
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Função de renderização
-    const render = () => {
-      const scrollTop = window.pageYOffset;
-      const maxScroll = container.offsetHeight - window.innerHeight;
+    // Refs internos ao effect para não ferir regras de hooks
+    let targetProgress = 0;
+    let currentProgress = 0;
+    let rafId = null;
 
-      // Calcula progresso com easing
-      const rawProgress = Math.min(scrollTop / maxScroll, 1);
-      const easedProgress = easeOutCubic(rawProgress);
-
-      // Calcula o frame atual baseado no progresso
-      const frameIndex = Math.min(
-        Math.floor(easedProgress * (frameCount - 1)),
-        frameCount - 1
+    // Helper: desenha um frame com alpha no canvas (object-fit: cover)
+    const drawFrame = (img, alpha) => {
+      if (!img || !img.complete || !img.naturalWidth) return;
+      const scale = Math.max(
+        canvas.width / img.naturalWidth,
+        canvas.height / img.naturalHeight
       );
-
-      const img = imagesRef.current[frameIndex];
-
-      if (img && img.complete) {
-        // Limpa canvas
-        context.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Calcula dimensões para cover (manter proporção)
-        const scale = Math.max(
-          canvas.width / img.width,
-          canvas.height / img.height
-        );
-
-        const x = (canvas.width / 2) - (img.width / 2) * scale;
-        const y = (canvas.height / 2) - (img.height / 2) * scale;
-
-        context.drawImage(img, x, y, img.width * scale, img.height * scale);
-      }
+      const x = (canvas.width - img.naturalWidth * scale) / 2;
+      const y = (canvas.height - img.naturalHeight * scale) / 2;
+      context.globalAlpha = alpha;
+      context.drawImage(img, x, y, img.naturalWidth * scale, img.naturalHeight * scale);
     };
 
-    // Renderiza no scroll
-    window.addEventListener('scroll', render);
-    render(); // Renderiza frame inicial
+    // Loop de animação a 60fps
+    const animate = () => {
+      // Lerp: currentProgress se aproxima suavemente de targetProgress
+      // 0.10 = velocidade de resposta (~100ms de lag) — aumente para mais rápido
+      const LERP = 0.10;
+      currentProgress += (targetProgress - currentProgress) * LERP;
+
+      // Posição exata do frame (pode ser fracionada, ex: 7.3)
+      const exactFrame = currentProgress * (frameCount - 1);
+      const frameA = Math.floor(exactFrame);
+      const frameB = Math.min(frameA + 1, frameCount - 1);
+      const blend = exactFrame - frameA; // 0–1: quanto do frameB mostrar
+
+      const imgA = imagesRef.current[frameA];
+      const imgB = imagesRef.current[frameB];
+
+      if (imgA && imgA.complete) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        // Frame base (1 - blend de opacidade)
+        drawFrame(imgA, 1 - blend);
+        // Frame seguinte sobreposto com opacidade = blend
+        if (blend > 0.01) drawFrame(imgB, blend);
+        context.globalAlpha = 1;
+      }
+
+      rafId = requestAnimationFrame(animate);
+    };
+
+    // Scroll atualiza apenas o valor-alvo (não desenha nada diretamente)
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const maxScroll = container.offsetHeight - window.innerHeight;
+      const rawProgress = Math.min(scrollTop / maxScroll, 1);
+      targetProgress = easeOutCubic(rawProgress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    rafId = requestAnimationFrame(animate); // inicia o loop
 
     return () => {
-      window.removeEventListener('scroll', render);
+      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', setCanvasSize);
+      if (rafId) cancelAnimationFrame(rafId);
     };
   }, [imagesLoaded]);
 
