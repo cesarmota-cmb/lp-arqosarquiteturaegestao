@@ -128,10 +128,12 @@ const HeroScrollAnimation = () => {
 
       if (imgA && imgA.complete) {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        // Frame base (1 - blend de opacidade)
-        drawFrame(imgA, 1 - blend);
-        // Frame seguinte sobreposto com opacidade = blend
-        if (blend > 0.01) drawFrame(imgB, blend);
+        // Frame A: sempre 100% opaco — base sólida sem flicker
+        drawFrame(imgA, 1.0);
+        // Frame B: sobreposto com o alpha do blend (cross-dissolve correto)
+        if (blend > 0.01 && imgB && imgB.complete) {
+          drawFrame(imgB, blend);
+        }
         context.globalAlpha = 1;
       }
 
