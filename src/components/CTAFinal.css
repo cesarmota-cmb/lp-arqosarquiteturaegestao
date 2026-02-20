@@ -15,8 +15,14 @@
 
 .cta-final p {
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   opacity: 0.95;
+}
+
+.cta-sub {
+  font-size: 15px !important;
+  opacity: 0.65 !important;
+  margin-bottom: 36px !important;
 }
 
 .cta-final .btn-primary {

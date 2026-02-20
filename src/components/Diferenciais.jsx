@@ -10,7 +10,7 @@ const Diferenciais = () => {
     {
       icon: '💰',
       title: 'Controle de Orçamento',
-      description: 'Sabemos onde gastar e onde economizar. Mesa personalizada mais barata que vitrine, escolha de materiais com leitura de custo-benefício real.'
+      description: 'Sabemos onde vale a pena gastar mais e onde podemos economizar. Obra pra ser boa não é feita de apenas materiais caros e também não pode ser comprometida com a falta de qualidade. O sucesso mora no equilíbrio.'
     },
     {
       icon: '👁️',
@@ -20,7 +20,7 @@ const Diferenciais = () => {
     {
       icon: '✨',
       title: 'Luxo Invisível',
-      description: 'Não gritamos ostentação. Entregamos soluções sofisticadas que só quem entende percebe — e isso atrai exatamente o público com mais repertório.'
+      description: 'Sua casa não precisa gritar tudo que tem dentro dela. Entregamos soluções sofisticadas que quem entende percebe.'
     }
   ];
 

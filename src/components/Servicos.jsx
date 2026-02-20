@@ -7,7 +7,7 @@ const Servicos = () => {
       icon: '🏠',
       titulo: 'Design de Interiores',
       destaque: true,
-      descricao: 'Especialmente para apartamentos. Layout inteligente, integração de ambientes, personalização total. É aqui que a maioria dos clientes começa — e descobre o valor de um projeto bem feito.',
+      descricao: 'Sua casa merece um layout inteligente e bonito! Integre seus ambientes, personalize com o seu jeito e adaptado para a sua rotina. É aqui que a maioria dos clientes começam, e descobrem o valor que tem um projeto bem feito.',
       features: [
         'Otimização de layout e fluxo',
         'Seleção de materiais e acabamentos',
@@ -56,19 +56,19 @@ const Servicos = () => {
 
         <div className="servicos-grid">
           {servicos.map((servico, index) => (
-            <div 
-              key={servico.id} 
+            <div
+              key={servico.id}
               className={`servico-card ${servico.destaque ? 'featured' : ''} fade-in-up`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {servico.destaque && <div className="servico-badge">MAIS PROCURADO</div>}
-              
+
               <div className="servico-image">{servico.icon}</div>
-              
+
               <div className="servico-content">
                 <h3>{servico.titulo}</h3>
                 <p>{servico.descricao}</p>
-                
+
                 <ul className="servico-features">
                   {servico.features.map((feature, idx) => (
                     <li key={idx}>{feature}</li>

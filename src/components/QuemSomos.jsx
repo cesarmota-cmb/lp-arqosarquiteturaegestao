@@ -11,22 +11,19 @@ const QuemSomos = () => {
 
         <div className="sobre-content">
           <div className="sobre-image">
-            {/* Aqui vai a foto da Ana Paula + Yuri */}
-            <div className="image-placeholder">
-              <span>Ana Paula + Yuri</span>
-            </div>
+            <img src="/yuri-ana.jpg" alt="Ana Paula e Yuri — Arqos Arquitetura" className="sobre-foto" />
           </div>
 
           <div className="sobre-text">
-            <h3>Ana Paula + Yuri</h3>
+            <h3>Quem Somos</h3>
             <p>
               A ARQOS nasceu da união de dois olhares: arquitetura e engenharia. Ana Paula traz a sensibilidade do design, a escuta do cliente, e a visão estética. Yuri traz a viabilidade técnica, o controle de execução, e a gestão de obra.
             </p>
             <p>
-              O resultado? Projetos que são bonitos <em>e</em> funcionam. Obras que são entregues <em>e</em> não dão problema. Clientes que veem valor antes de aprovar, e segurança durante a execução.
+              O resultado? Projetos que são bonitos e funcionais. Obras que são entregues e dentro da expectativa. Clientes que veem o que será construído antes de aprovar, e segurança durante a execução.
             </p>
             <p>
-              Atendemos Itajubá e região (até 100km) com uma proposta rara no mercado: arquitetura + gestão de obra no mesmo pacote. Porque quem projeta deveria acompanhar até o fim.
+              Atendemos Itajubá e região com uma proposta rara no mercado: arquitetura + gestão de obra. Podendo projetar e acompanhar até o fim.
             </p>
             <span className="equipe-tag">👷‍♀️ Arquitetura + Engenharia</span>
           </div>

@@ -127,6 +127,30 @@
   padding: 12px 22px;
 }
 
+.hero-cta-group .btn-primary {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+.hero-cta-group .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.88);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-cta-group .btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-cta-group .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
 /* ─── Stats bar ──────────────────────────────────────────────────── */
 .hero-stats {
   display: flex;

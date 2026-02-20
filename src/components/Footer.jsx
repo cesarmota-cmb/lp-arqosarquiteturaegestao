@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-col">
-            <div className="footer-logo">ARQOS</div>
+            <img src="/LOGOTIPOVERTICAL10.PNG" alt="Arqos Arquitetura" className="footer-logo-img" />
             <p style={{ marginBottom: '16px' }}>Arquitetura e Gestão de Obras</p>
             <p style={{ fontSize: '14px', lineHeight: '1.8' }}>
               Itajubá e região<br />
-              Atendimento: 08h às 17h<br />
+              Segunda a Sexta das 08h às 17h<br />
               WhatsApp: (35) 99759-8403
             </p>
           </div>
@@ -27,10 +27,15 @@ const Footer = () => {
 
           <div className="footer-col">
             <h4>Endereço</h4>
-            <p style={{ fontSize: '14px', lineHeight: '1.8' }}>
+            <a
+              href="https://maps.app.goo.gl/K4EK6Y6dZ8KRWDyi9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-address-link"
+            >
               Rua Antônio Simão Mauad, 149<br />
               Sala 208 — Itajubá, MG
-            </p>
+            </a>
             <div style={{ marginTop: '20px' }}>
               <h4>Formas de Pagamento</h4>
               <p style={{ fontSize: '14px', lineHeight: '1.8' }}>

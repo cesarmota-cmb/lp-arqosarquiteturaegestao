@@ -7,11 +7,11 @@ const FAQ = () => {
   const faqs = [
     {
       pergunta: 'Quanto custa um projeto?',
-      resposta: 'O valor depende do tipo de projeto, tamanho do imóvel, e complexidade. Não passamos orçamento por WhatsApp porque cada caso é único. Fazemos uma reunião (online ou presencial), entendemos seu projeto, e apresentamos uma proposta personalizada com processo, etapas e valor. É transparente, claro, e sem surpresas.'
+      resposta: 'O valor depende do tipo de projeto, tamanho do imóvel, e complexidade. Fazemos uma reunião (online ou presencial), entendemos seu projeto, e apresentamos uma proposta personalizada com processo, etapas e valor. É transparente, claro, e sem surpresas.'
     },
     {
       pergunta: 'Vocês atendem fora de Itajubá?',
-      resposta: 'Sim! Atendemos Itajubá e região em um raio de até 100km. Trabalhamos com reuniões presenciais e online, facilitando o processo mesmo para clientes de cidades próximas.'
+      resposta: 'Sim! Atendemos Itajubá e região. Trabalhamos com reuniões presenciais e online, facilitando o processo mesmo para clientes de cidades próximas.'
     },
     {
       pergunta: 'Qual a diferença entre projeto arquitetônico e gestão de obra?',
@@ -33,10 +33,6 @@ const FAQ = () => {
       pergunta: 'Vocês cobram pela primeira visita?',
       resposta: 'Não. A primeira conversa é gratuita. Só cobramos visitas adicionais antes do fechamento do projeto, caso sejam necessárias. Nossa prioridade é entender seu projeto e apresentar uma proposta de valor.'
     },
-    {
-      pergunta: 'Quanto tempo leva para fechar depois da proposta?',
-      resposta: 'A média é de 7 a 15 dias. Alguns clientes fecham no mesmo dia (quando já estão prontos), outros preferem alinhar com o timing financeiro e fecham na virada do mês. Não pressionamos — respeitamos seu tempo de decisão.'
-    }
   ];
 
   const toggleFAQ = (index) => {
@@ -53,11 +49,11 @@ const FAQ = () => {
 
         <div className="faq-list">
           {faqs.map((faq, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`faq-item ${activeIndex === index ? 'active' : ''}`}
             >
-              <div 
+              <div
                 className="faq-question"
                 onClick={() => toggleFAQ(index)}
               >
