@@ -1,0 +1,57 @@
+.diferenciais {
+  background: var(--bg-white);
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.diferencial-card {
+  padding: 40px 32px;
+  background: var(--bg-cream);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+  opacity: 0;
+}
+
+.diferencial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(139, 115, 85, 0.15);
+  border-color: var(--accent);
+}
+
+.diferencial-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.diferencial-card h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.diferencial-card p {
+  color: var(--text-medium);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .diferenciais-grid {
+    grid-template-columns: 1fr;
+  }
+}

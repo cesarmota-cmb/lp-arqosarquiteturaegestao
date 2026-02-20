@@ -1,0 +1,30 @@
+.cta-final {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  text-align: center;
+  color: white;
+}
+
+.cta-final h2 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.cta-final p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.cta-final .btn-primary {
+  background: white;
+  color: var(--primary);
+}
+
+.cta-final .btn-primary:hover {
+  background: var(--bg-cream);
+  transform: translateY(-4px);
+}

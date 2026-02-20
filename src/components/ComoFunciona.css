@@ -1,0 +1,72 @@
+.como-funciona {
+  background: var(--bg-cream);
+}
+
+.processo-timeline {
+  max-width: 900px;
+  margin: 60px auto 0;
+}
+
+.processo-step {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 48px;
+  opacity: 0;
+}
+
+.processo-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+}
+
+.processo-number::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+.processo-step:last-child .processo-number::after {
+  display: none;
+}
+
+.processo-content h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.processo-content p {
+  color: var(--text-medium);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .processo-step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .processo-number::after {
+    left: 30px;
+    transform: none;
+  }
+}

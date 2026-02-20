@@ -1,0 +1,75 @@
+.prova-social {
+  background: var(--bg-white);
+}
+
+.casos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.caso-card {
+  background: var(--bg-cream);
+  padding: 40px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  opacity: 0;
+}
+
+.caso-titulo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.caso-descricao {
+  margin-bottom: 24px;
+}
+
+.caso-descricao p {
+  color: var(--text-medium);
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.caso-descricao strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.depoimento {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border-left: 3px solid var(--primary-light);
+}
+
+.depoimento p:first-child {
+  font-style: italic;
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.depoimento-autor {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .casos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caso-card {
+    padding: 32px 24px;
+  }
+}

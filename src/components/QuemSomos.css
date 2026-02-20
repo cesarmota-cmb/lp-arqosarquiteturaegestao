@@ -1,0 +1,74 @@
+.quem-somos {
+  background: var(--bg-cream);
+}
+
+.sobre-content {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.sobre-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sobre-text h3 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.sobre-text p {
+  color: var(--text-medium);
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.sobre-text em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.equipe-tag {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .sobre-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sobre-image {
+    aspect-ratio: 3/4;
+  }
+}
