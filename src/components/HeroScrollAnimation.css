@@ -1,3 +1,22 @@
+/* Capitana font - coloque os arquivos em public/fonts/ */
+@font-face {
+  font-family: 'Capitana';
+  src: url('/fonts/Capitana.woff2') format('woff2'),
+    url('/fonts/Capitana.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Capitana';
+  src: url('/fonts/Capitana-Bold.woff2') format('woff2'),
+    url('/fonts/Capitana-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .hero-scroll-container {
   position: relative;
   width: 100%;
@@ -63,11 +82,20 @@
 }
 
 /* ─── Title ──────────────────────────────────────────────────────── */
+.hero-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 4px;
+  filter: brightness(0) invert(1);
+}
+
+/* ─── Title ──────────────────────────────────────────────────────── */
 .hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3.2vw, 42px);
+  font-family: 'Capitana', 'Cormorant', serif;
+  font-size: clamp(30px, 3.8vw, 50px);
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.95);
   letter-spacing: -0.5px;
   margin: 0;
@@ -176,13 +204,27 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
 }
 
 @keyframes scroll-wheel {
-  0%   { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(16px); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
 }
 
 /* ─── Preloader ──────────────────────────────────────────────────── */

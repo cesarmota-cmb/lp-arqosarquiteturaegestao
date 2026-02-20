@@ -173,10 +173,11 @@ const HeroScrollAnimation = () => {
       {heroActive && (
         <div className="hero-content-fixed" style={{ opacity: heroOpacity, transition: 'opacity 0.1s linear' }}>
           <div className="hero-card">
-            <span className="hero-badge">Itajubá e Região • Até 100km</span>
+            <img src="/LOGOTIPOVERTICAL10.PNG" alt="Arqos Arquitetura" className="hero-logo" />
+            <span className="hero-badge">Escritório de Arquitetura em Itajubá</span>
             <h1 className="hero-title">
-              O lar ideal ele não se procura.<br />
-              <strong>Ele se projeta.</strong>
+              O lar ideal não se procura.
+              <strong> Ele se projeta.</strong>
             </h1>
             <p className="hero-subtitle">
               Projetos personalizados + gestão de obra integrada. Sem surpresas no orçamento, sem retrabalho, sem dor de cabeça.
@@ -193,16 +194,9 @@ const HeroScrollAnimation = () => {
                 </svg>
                 Agendar Conversa
               </a>
-              <a href="#diferenciais" className="btn btn-secondary">
-                Ver Como Funciona
+              <a href="#portfolio" className="btn btn-secondary">
+                Ver Projetos
               </a>
-            </div>
-            <div className="hero-stats">
-              <div className="hero-stat"><span className="stat-num">100+</span><span className="stat-label">Projetos</span></div>
-              <div className="hero-stat-divider" />
-              <div className="hero-stat"><span className="stat-num">12+</span><span className="stat-label">Anos</span></div>
-              <div className="hero-stat-divider" />
-              <div className="hero-stat"><span className="stat-num">100km</span><span className="stat-label">Área de atuação</span></div>
             </div>
           </div>
 
