@@ -1,21 +1,58 @@
+@font-face {
+  font-family: 'Capitana';
+  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Capitana';
+  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Capitana';
+  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Capitana';
+  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   /* Paleta ARQOS - Manual da Marca */
-  --primary: #414C50;        /* Cinza petróleo */
-  --primary-dark: #643E31;   /* Marrom escuro */
-  --primary-light: #996B5C;  /* Rosado */
-  --accent: #9C6D4C;         /* Terracota */
-  --accent-light: #B69676;   /* Bege claro */
+  --primary: #414C50;
+  /* Cinza petróleo */
+  --primary-dark: #643E31;
+  /* Marrom escuro */
+  --primary-light: #996B5C;
+  /* Rosado */
+  --accent: #9C6D4C;
+  /* Terracota */
+  --accent-light: #B69676;
+  /* Bege claro */
   --bg-cream: #F5F3F0;
   --bg-white: #FFFFFF;
-  --text-dark: #414C50;      /* Cinza petróleo */
-  --text-medium: #737373;    /* Cinza médio */
-  --text-light: #B1A19E;     /* Rosado claro */
-  --divider: #B8B6B0;        /* Cinza claro */
-  
+  --text-dark: #414C50;
+  /* Cinza petróleo */
+  --text-medium: #737373;
+  /* Cinza médio */
+  --text-light: #B1A19E;
+  /* Rosado claro */
+  --divider: #B8B6B0;
+  /* Cinza claro */
+
   /* Typography */
-  --font-display: 'Cormorant', serif;
+  --font-display: 'Capitana', serif;
   --font-body: 'Outfit', sans-serif;
-  
+
   /* Spacing */
   --section-padding: clamp(60px, 10vw, 120px);
   --container-max: 1200px;
@@ -128,6 +165,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
