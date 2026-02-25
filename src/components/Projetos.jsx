@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Projetos.css';
 
 const Projetos = () => {
   const [activeProject, setActiveProject] = useState(null);
+  const carouselRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = 432; // card width + gap
+      carouselRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
   const projetos = [
     {
       id: 'casa-bloco',
@@ -82,7 +93,9 @@ const Projetos = () => {
         </div>
 
         <div className="projetos-carousel-container">
-          <div className="projetos-carousel">
+          <button className="carousel-nav prev" onClick={() => scroll('left')} aria-label="Anterior">❮</button>
+
+          <div className="projetos-carousel" ref={carouselRef}>
             {projetos.map((projeto, index) => (
               <div
                 key={projeto.id}
@@ -105,7 +118,10 @@ const Projetos = () => {
               </div>
             ))}
           </div>
-          <div className="carousel-hint">Arraste para o lado ➔</div>
+
+          <button className="carousel-nav next" onClick={() => scroll('right')} aria-label="Próximo">❯</button>
+
+          <div className="carousel-hint">Arraste para o lado ou use as setas ➔</div>
         </div>
 
         <div className="portfolio-cta">
