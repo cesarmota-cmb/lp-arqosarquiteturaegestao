@@ -5,34 +5,68 @@ const Projetos = () => {
   const [activeProject, setActiveProject] = useState(null);
   const projetos = [
     {
-      id: 'apt-integrado',
-      tipo: 'Design de Interiores',
-      titulo: 'Apartamento Integrado',
+      id: 'casa-bloco',
+      tipo: 'Residencial',
+      titulo: 'Casa Bloco',
       localizacao: 'Itajubá',
-      metragem: '85m²',
-      descricao: 'Integração total de cozinha e sala, marcenaria sob medida, e área gourmet que se tornou o coração da casa.',
-      image: '/images/design-de-interiores.jpg', // Placeholder principal atualizado
-      gallery: ['/images/projects/apt-integrado/img1.jpg'] // Base para o usuário subir
+      metragem: '250m²',
+      descricao: 'Arquitetura contemporânea com foco em volumetria e integração com o entorno. Espaços amplos e luz natural estratégica.',
+      image: '/images/projects/casa-bloco/FOTO-36.webp',
+      gallery: [
+        '/images/projects/casa-bloco/FOTO-4.webp',
+        '/images/projects/casa-bloco/FOTO-7.webp',
+        '/images/projects/casa-bloco/FOTO-13.webp',
+        '/images/projects/casa-bloco/FOTO-14.webp',
+        '/images/projects/casa-bloco/FOTO-32.webp',
+        '/images/projects/casa-bloco/FOTO-38.webp',
+        '/images/projects/casa-bloco/FOTO-40.webp'
+      ]
     },
     {
-      id: 'casa-office',
-      tipo: 'Projeto + Gestão',
-      titulo: 'Casa Home Office',
-      localizacao: 'Região',
-      metragem: '120m²',
-      descricao: 'Casal de TI precisava de espaço funcional para trabalho + vida pessoal. Criamos dois escritórios integrados.',
-      image: '/images/projeto-arquitetonico.jpg',
-      gallery: ['/images/projects/casa-office/img1.jpg']
+      id: 'consultorio-fono',
+      tipo: 'Saúde / Comercial',
+      titulo: 'Consultório Fono',
+      localizacao: 'Itajubá',
+      metragem: '45m²',
+      descricao: 'Design voltado para o bem-estar e acolhimento. Cores suaves e mobiliário ergonômico para um ambiente profissional e humano.',
+      image: '/images/projects/consultorio-fono/FOTO-32.webp',
+      gallery: [
+        '/images/projects/consultorio-fono/FOTO-11.webp',
+        '/images/projects/consultorio-fono/FOTO-17.webp',
+        '/images/projects/consultorio-fono/FOTO-19.webp',
+        '/images/projects/consultorio-fono/FOTO-28.webp'
+      ]
     },
     {
-      id: 'renovacao',
-      tipo: 'Reforma Completa',
-      titulo: 'Renovação Total',
+      id: 'cozinha',
+      tipo: 'Interiores',
+      titulo: 'Cozinha Integrada',
       localizacao: 'Itajubá',
-      metragem: '95m²',
-      descricao: 'De "casa antiga dos anos 90" para um espaço moderno, acolhedor, e funcional. Obra entregue no prazo.',
-      image: '/images/gestao-de-obras.png',
-      gallery: ['/images/projects/renovacao/img1.jpg']
+      metragem: '30m²',
+      descricao: 'Reforma de cozinha com integração total, marcenaria funcional e acabamentos de alto padrão.',
+      image: '/images/projects/cozinha/FOTO-14.webp',
+      gallery: [
+        '/images/projects/cozinha/FOTO-13.webp',
+        '/images/projects/cozinha/FOTO-15.webp',
+        '/images/projects/cozinha/FOTO-16.webp',
+        '/images/projects/cozinha/FOTO-17.webp',
+        '/images/projects/cozinha/FOTO-23.webp'
+      ]
+    },
+    {
+      id: 'hotel-amantikyr',
+      tipo: 'Comercial / Luxo',
+      titulo: 'Hotel Amantikyr',
+      localizacao: 'Serra da Mantiqueira',
+      metragem: '1800m²',
+      descricao: 'Complexo hoteleiro de luxo. Design sofisticado que respeita a natureza e oferece experiência única aos hóspedes.',
+      image: '/images/projects/hotel-amantikyr/FOTO-9.webp',
+      gallery: [
+        '/images/projects/hotel-amantikyr/FOTO-4.webp',
+        '/images/projects/hotel-amantikyr/FOTO-7.webp',
+        '/images/projects/hotel-amantikyr/FOTO-8.webp',
+        '/images/projects/hotel-amantikyr/FOTO-12.webp'
+      ]
     }
   ];
 
