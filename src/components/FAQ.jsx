@@ -23,7 +23,7 @@ const FAQ = () => {
     },
     {
       pergunta: 'Quanto tempo leva um projeto?',
-      resposta: 'Depende da complexidade. Um projeto de interiores para apartamento pode levar de 30 a 60 dias. Projeto arquitetônico completo com aprovação na prefeitura pode levar de 60 a 90 dias. Na reunião inicial, te damos um cronograma realista baseado no seu caso.'
+      resposta: 'Depende da complexidade. Um projeto de interiores para apartamento de acordo com a quantidade de ambientes e tamanho do imóvel. Projeto arquitetônico completo com aprovação na prefeitura pode levar de 60 a 90 dias. Na reunião inicial, te damos um cronograma realista baseado no seu caso.'
     },
     {
       pergunta: 'Por que o 3D no pré-projeto é importante?',
