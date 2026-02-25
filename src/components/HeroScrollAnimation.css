@@ -1,22 +1,3 @@
-/* Capitana font - coloque os arquivos em public/fonts/ */
-@font-face {
-  font-family: 'Capitana';
-  src: url('/fonts/Capitana.woff2') format('woff2'),
-    url('/fonts/Capitana.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Capitana';
-  src: url('/fonts/Capitana-Bold.woff2') format('woff2'),
-    url('/fonts/Capitana-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 .hero-scroll-container {
   position: relative;
   width: 100%;
@@ -92,7 +73,7 @@
 
 /* ─── Title ──────────────────────────────────────────────────────── */
 .hero-title {
-  font-family: 'Capitana', 'Cormorant', serif;
+  font-family: var(--font-display);
   font-size: clamp(30px, 3.8vw, 50px);
   font-weight: 400;
   line-height: 1.2;
