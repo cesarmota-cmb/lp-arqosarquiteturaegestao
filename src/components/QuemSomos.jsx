@@ -26,7 +26,7 @@ const QuemSomos = () => {
               Atendemos Itajubá e região com uma proposta rara no mercado: arquitetura + gestão de obra. Podendo projetar e acompanhar até o fim.
             </p>
             <div className="sobre-logo">
-              <img src="/LOGOTIPOVERTICAL10.PNG" alt="ARQOS Logo — Arquitetura + Engenharia" className="brand-logo" />
+              <img src="/logo-azul-e-marrom.png" alt="ARQOS Logo — Arquitetura + Engenharia" className="brand-logo" />
             </div>
           </div>
         </div>
