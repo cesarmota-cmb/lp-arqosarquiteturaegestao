@@ -73,7 +73,7 @@
 
 /* ─── Title ──────────────────────────────────────────────────────── */
 .hero-title {
-  font-family: var(--font-test);
+  font-family: var(--font-display);
   font-size: clamp(30px, 3.8vw, 50px);
   font-weight: 600;
   line-height: 1.2;

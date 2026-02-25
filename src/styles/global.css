@@ -1,33 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'Capitana';
-  src: url('/fonts/Capitana-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Capitana';
-  src: url('/fonts/Capitana-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Capitana';
-  src: url('/fonts/Capitana-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Capitana';
-  src: url('/fonts/Capitana-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
 :root {
   /* Paleta ARQOS - Manual da Marca */
   --primary: #414C50;
@@ -52,8 +24,7 @@
   /* Cinza claro */
 
   /* Typography */
-  --font-display: 'Capitana', serif;
-  --font-test: 'Montserrat', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-body: 'Outfit', sans-serif;
 
   /* Spacing */
