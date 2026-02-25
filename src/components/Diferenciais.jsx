@@ -31,7 +31,7 @@ const Diferenciais = () => {
           <span className="section-label">Por que escolher a ARQOS</span>
           <h2 className="section-title">O que nos torna diferentes</h2>
           <p className="section-description">
-            Não é só fazer bonito. É fazer certo, com controle, transparência e um processo que você entende do começo ao fim.
+            Além de transformarmos seu ambiente em Lar. É fazer certo, com controle, transparência e um processo que você entende do começo ao fim.
           </p>
         </div>
 
