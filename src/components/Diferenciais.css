@@ -9,6 +9,11 @@
   margin-top: 60px;
 }
 
+.diferenciais .section-title {
+  font-family: var(--font-test);
+  font-weight: 600;
+}
+
 .diferencial-card {
   padding: 40px 32px;
   background: var(--bg-cream);
@@ -40,9 +45,9 @@
 }
 
 .diferencial-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-test);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 12px;
   color: var(--text-dark);
 }
