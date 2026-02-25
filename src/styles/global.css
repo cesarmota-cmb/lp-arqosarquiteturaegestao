@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'Capitana';
-  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-regular.otf') format('opentype');
+  src: url('/fonts/Fontspring-DEMO-capitana-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Capitana';
-  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-medium.otf') format('opentype');
+  src: url('/fonts/Fontspring-DEMO-capitana-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Capitana';
-  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-semibold.otf') format('opentype');
+  src: url('/fonts/Fontspring-DEMO-capitana-semibold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Capitana';
-  src: url('../assets/fonts/capitana-titulos/Fontspring-DEMO-capitana-bold.otf') format('opentype');
+  src: url('/fonts/Fontspring-DEMO-capitana-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
