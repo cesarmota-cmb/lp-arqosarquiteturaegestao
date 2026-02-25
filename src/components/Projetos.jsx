@@ -120,8 +120,6 @@ const Projetos = () => {
           </div>
 
           <button className="carousel-nav next" onClick={() => scroll('right')} aria-label="Próximo">❯</button>
-
-          <div className="carousel-hint">Arraste para o lado ou use as setas ➔</div>
         </div>
 
         <div className="portfolio-cta">
