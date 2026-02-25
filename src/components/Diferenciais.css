@@ -25,15 +25,18 @@
 }
 
 .diferencial-icon {
-  width: 56px;
-  height: 56px;
-  background: var(--primary);
-  border-radius: 12px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  font-size: 28px;
+}
+
+.diferencial-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .diferencial-card h3 {
