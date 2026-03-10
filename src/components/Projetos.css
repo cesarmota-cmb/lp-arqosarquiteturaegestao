@@ -160,6 +160,18 @@
   font-size: 14px;
 }
 
+.projeto-descricao-card {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-medium);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* ─── Behance Button ────────────────────────────────────────── */
 .portfolio-cta {
   display: flex;

@@ -114,6 +114,7 @@ const Projetos = () => {
                 <div className="projeto-content">
                   <h3>{projeto.titulo}</h3>
                   <p className="projeto-meta">{projeto.localizacao} • {projeto.metragem}</p>
+                  <p className="projeto-descricao-card">{projeto.descricao}</p>
                 </div>
               </div>
             ))}
