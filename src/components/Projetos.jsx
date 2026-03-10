@@ -20,8 +20,8 @@ const Projetos = () => {
       tipo: 'Residencial',
       titulo: 'Casa Bloco',
       localizacao: 'Itajubá',
-      metragem: '250m²',
-      descricao: 'Arquitetura contemporânea com foco em volumetria e integração com o entorno. Espaços amplos e luz natural estratégica.',
+      metragem: '105m²',
+      descricao: 'Esse projeto nasceu de um limite claro: o orçamento disponível. Redesenhamos a casa para que ela fosse possível, transformando restrições em linguagem. O bloco estrutural aparente, o cimento queimado e as soluções diretas deram forma a um espaço autêntico, econômico e cheio de identidade.\nUma casa onde o essencial foi valorizado, e onde morar bem se tornou viável.',
       image: '/images/projects/casa-bloco/FOTO-36.webp',
       gallery: [
         '/images/projects/casa-bloco/FOTO-4.webp',
@@ -38,8 +38,8 @@ const Projetos = () => {
       tipo: 'Saúde / Comercial',
       titulo: 'Consultório Fono',
       localizacao: 'Itajubá',
-      metragem: '45m²',
-      descricao: 'Design voltado para o bem-estar e acolhimento. Cores suaves e mobiliário ergonômico para um ambiente profissional e humano.',
+      metragem: '26m²',
+      descricao: 'Este projeto nasceu do desafio de traduzir a identidade da marca em dois universos distintos, dentro do mesmo espaço. Criamos uma recepção mais sóbria e acolhedora, pensada para o atendimento adulto, e um setor infantil lúdico e sensível, onde as cores, as formas orgânicas e a parede em aquarela constroem uma experiência mais intuitiva. As soluções de armazenamento e o desenho dos elementos garantem funcionalidade sem perder a leveza. O resultado é um consultório que equilibra profissionalismo e afeto, respeitando as diferentes formas de acolher quem chega.',
       image: '/images/projects/consultorio-fono/FOTO-32.webp',
       gallery: [
         '/images/projects/consultorio-fono/FOTO-11.webp',
@@ -53,8 +53,8 @@ const Projetos = () => {
       tipo: 'Interiores',
       titulo: 'Cozinha Integrada',
       localizacao: 'Itajubá',
-      metragem: '30m²',
-      descricao: 'Reforma de cozinha com integração total, marcenaria funcional e acabamentos de alto padrão.',
+      metragem: '20m²',
+      descricao: 'Este projeto marcou o início da vida desse casal no primeiro apartamento. A cozinha, escolhida como o coração da casa, foi o primeiro espaço a ganhar forma. Trabalhamos a marcenaria em azul como elemento central, trazendo identidade e profundidade, em equilíbrio com tons claros e madeira natural. As soluções integradas garantem funcionalidade e leveza, respeitando a estética sóbria dos moradores. O resultado é um espaço que traduz conquista e permanência, onde a rotina começa a construir novas memórias. 💙',
       image: '/images/projects/cozinha/FOTO-14.webp',
       gallery: [
         '/images/projects/cozinha/FOTO-13.webp',
@@ -69,8 +69,8 @@ const Projetos = () => {
       tipo: 'Comercial / Luxo',
       titulo: 'Hotel Amantikyr',
       localizacao: 'Serra da Mantiqueira',
-      metragem: '1800m²',
-      descricao: 'Complexo hoteleiro de luxo. Design sofisticado que respeita a natureza e oferece experiência única aos hóspedes.',
+      metragem: '26m²',
+      descricao: 'Este projeto nasceu da integração de dois quartos existentes, que já não atendiam às novas demandas do hotel. Ao remover a parede entre eles, criamos uma suíte mais ampla e funcional, pensada para estadias mais longas e confortáveis. Mantivemos elementos originais e incorporamos novos usos, como a copa e o espaço de permanência, ampliando a experiência do hóspede sem descaracterizar o edifício. A iluminação indireta e os materiais escolhidos reforçam a sensação de acolhimento e qualificam o tempo de permanência dentro do quarto.',
       image: '/images/projects/hotel-amantikyr/FOTO-9.webp',
       gallery: [
         '/images/projects/hotel-amantikyr/FOTO-4.webp',

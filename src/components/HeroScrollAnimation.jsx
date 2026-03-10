@@ -216,7 +216,7 @@ const HeroScrollAnimation = () => {
                 </svg>
                 Agendar Conversa
               </a>
-              <a href="#portfolio" className="btn btn-secondary">
+              <a href="#projetos" className="btn btn-secondary">
                 Ver Projetos
               </a>
             </div>
