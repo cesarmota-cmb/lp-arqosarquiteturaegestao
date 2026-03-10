@@ -10,8 +10,8 @@ const HeroScrollAnimation = () => {
   const [heroOpacity, setHeroOpacity] = useState(1);
   const imagesRef = useRef([]);
 
-  const frameCount = 40;
-  const scrollHeight = 3000; // Altura de scroll para completar a animação
+  const frameCount = 20;
+  const scrollHeight = 1200; // Scroll mais curto para terminar rápido
 
   // Função de easing suave (ease-out cubic)
   const easeOutCubic = (t) => {
@@ -27,7 +27,7 @@ const HeroScrollAnimation = () => {
       for (let i = 1; i <= frameCount; i++) {
         const img = new Image();
         const frameNumber = i.toString().padStart(3, '0');
-        img.src = `/images/ezgif-frame-${frameNumber}.webp`;
+        img.src = `/images/frames-hero-webp/ezgif-frame-${frameNumber}.webp`;
 
         img.onload = () => {
           loadedCount++;
