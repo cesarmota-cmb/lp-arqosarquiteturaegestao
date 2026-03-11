@@ -11,7 +11,16 @@ const HeroScrollAnimation = () => {
   const imagesRef = useRef([]);
 
   const frameCount = 20;
-  const scrollHeight = 1200; // Scroll mais curto para terminar rápido
+  const [scrollHeight, setScrollHeight] = useState(1200);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      setScrollHeight(window.innerHeight + 300); // 300px de scroll space = "1 scroll" suave
+    };
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
 
   // Função de easing suave (ease-out cubic)
   const easeOutCubic = (t) => {
@@ -52,31 +61,7 @@ const HeroScrollAnimation = () => {
     imagesRef.current = images;
   }, []);
 
-  // Controla visibilidade do hero
-  useEffect(() => {
-    const handleHeroVisibility = () => {
-      const scrollTop = window.pageYOffset;
-      const fadeStart = scrollHeight - window.innerHeight - 200; // começa a sumir 200px antes do fim
-      const fadeEnd = scrollHeight - window.innerHeight;
-
-      if (scrollTop >= fadeEnd) {
-        setHeroActive(false);
-        setHeroOpacity(0);
-      } else if (scrollTop >= fadeStart) {
-        const progress = (scrollTop - fadeStart) / (fadeEnd - fadeStart);
-        setHeroOpacity(1 - progress);
-        setHeroActive(true);
-      } else {
-        setHeroActive(true);
-        setHeroOpacity(1);
-      }
-    };
-
-    window.addEventListener('scroll', handleHeroVisibility, { passive: true });
-    return () => window.removeEventListener('scroll', handleHeroVisibility);
-  }, []);
-
-  // Animação baseada em scroll — RAF + Lerp + Frame Blending
+  // Sem controle de opacidade - o scroll nativo (sticky) fará o herói subir com a página
   useEffect(() => {
     if (!imagesLoaded) return;
 
@@ -180,20 +165,17 @@ const HeroScrollAnimation = () => {
         </div>
       )}
 
-      {/* Canvas com a animação - sempre no DOM para preservar o contexto de renderização */}
-      <canvas
-        ref={canvasRef}
-        className="hero-canvas"
-        style={{
-          opacity: heroActive ? heroOpacity : 0,
-          transition: 'opacity 0.1s linear',
-          pointerEvents: 'none',
-        }}
-      />
+      {/* Conteúdo sticky que trava na tela enquanto o container desce */}
+      <div className="hero-sticky-wrapper">
+        {/* Canvas com a animação */}
+        <canvas
+          ref={canvasRef}
+          className="hero-canvas"
+          style={{ pointerEvents: 'none' }}
+        />
 
-      {/* Conteúdo fixo do Hero */}
-      {heroActive && (
-        <div className="hero-content-fixed" style={{ opacity: heroOpacity, transition: 'opacity 0.1s linear' }}>
+        {/* Conteúdo flutuante do Hero */}
+        <div className="hero-content-fixed">
           <div className="hero-card">
             <img src="/LOGOTIPOVERTICAL10.PNG" alt="Arqos Arquitetura" className="hero-logo" />
             <span className="hero-badge">Escritório de Arquitetura em Itajubá</span>
@@ -230,7 +212,7 @@ const HeroScrollAnimation = () => {
             <span>Role para explorar</span>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
