@@ -15,7 +15,8 @@ const HeroScrollAnimation = () => {
 
   useEffect(() => {
     const updateHeight = () => {
-      setScrollHeight(window.innerHeight + 300); // 300px de scroll space = "1 scroll" suave
+      // 500px para a animação + 400px de pausa = 900px de scroll extra
+      setScrollHeight(window.innerHeight + 900);
     };
     updateHeight();
     window.addEventListener('resize', updateHeight);
@@ -128,8 +129,9 @@ const HeroScrollAnimation = () => {
     // Scroll atualiza apenas o valor-alvo (não desenha nada diretamente)
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      const maxScroll = container.offsetHeight - window.innerHeight;
-      const rawProgress = Math.min(scrollTop / maxScroll, 1);
+      // Define o limite de scroll exclusivo para atingir 100% da animação (ex: 500px)
+      const animationMaxScroll = 500;
+      const rawProgress = Math.min(scrollTop / animationMaxScroll, 1);
       targetProgress = easeOutCubic(rawProgress);
     };
 
