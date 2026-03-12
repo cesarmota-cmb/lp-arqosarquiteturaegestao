@@ -15,7 +15,7 @@
   pointer-events: auto;
 }
 
-.sticky-whatsapp a {
+.sticky-whatsapp-btn {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -29,9 +29,11 @@
   box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
   transition: all 0.3s ease;
   font-family: var(--font-body);
+  border: none;
+  cursor: pointer;
 }
 
-.sticky-whatsapp a:hover {
+.sticky-whatsapp-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
   background: #20BA5A;
@@ -49,7 +51,7 @@
     right: 20px;
   }
 
-  .sticky-whatsapp a {
+  .sticky-whatsapp-btn {
     padding: 14px 20px;
     font-size: 14px;
   }
@@ -63,7 +65,7 @@
     display: none;
   }
 
-  .sticky-whatsapp a {
+  .sticky-whatsapp-btn {
     width: 56px;
     height: 56px;
     padding: 0;

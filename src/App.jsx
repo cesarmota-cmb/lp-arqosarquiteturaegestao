@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import HeroScrollAnimation from './components/HeroScrollAnimation';
 import Diferenciais from './components/Diferenciais';
 import ComoFunciona from './components/ComoFunciona';
@@ -10,8 +10,19 @@ import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
 import Footer from './components/Footer';
 import StickyWhatsApp from './components/StickyWhatsApp';
+import LeadModal from './components/LeadModal';
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalSource, setModalSource] = useState('geral');
+
+  const openModal = (source = 'geral') => {
+    setModalSource(source);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
+
   useEffect(() => {
     // Smooth scroll para links âncora
     const handleAnchorClick = (e) => {
@@ -34,17 +45,18 @@ function App() {
 
   return (
     <div className="App">
-      <HeroScrollAnimation />
+      <LeadModal isOpen={modalOpen} onClose={closeModal} source={modalSource} />
+      <HeroScrollAnimation onOpenModal={openModal} />
       <Diferenciais />
-      <ComoFunciona />
+      <ComoFunciona onOpenModal={openModal} />
       <Servicos />
       <Projetos />
-      <ProvaSocial />
+      <ProvaSocial onOpenModal={openModal} />
       <QuemSomos />
       <FAQ />
-      <CTAFinal />
+      <CTAFinal onOpenModal={openModal} />
       <Footer />
-      <StickyWhatsApp />
+      <StickyWhatsApp onOpenModal={openModal} />
     </div>
   );
 }
