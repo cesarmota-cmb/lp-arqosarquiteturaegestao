@@ -78,7 +78,7 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
         <button className="lead-modal-close" onClick={onClose} aria-label="Fechar">✕</button>
 
         <div className="lead-modal-header">
-          <img src="/LOGOTIPOVERTICAL10.PNG" alt="Arqos Arquitetura" className="lead-modal-logo" />
+          <img src="/logo-marrom.png" alt="Arqos Arquitetura" className="lead-modal-logo" />
           <h2>Solicite Seu Orçamento</h2>
           <p>Preencha rapidamente e fale com um especialista.</p>
         </div>
