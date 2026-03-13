@@ -54,16 +54,23 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
       nome,
       telefone: phoneDigits,
       origem_sessao: source,
-      ...utms,
+      utm_source: utms.utm_source || 'direto',
+      utm_medium: utms.utm_medium || (utms.gclid ? 'cpc' : 'nenhum'),
+      utm_campaign: utms.utm_campaign || 'nenhuma',
+      utm_term: utms.utm_term || 'nenhum',
+      utm_content: utms.utm_content || 'nenhum',
+      gclid: utms.gclid || '',
+      fbclid: utms.fbclid || '',
       data_hora: new Date().toLocaleString('pt-BR'),
-      url_origem: window.location.href
+      url_origem: window.location.href,
+      referrer: document.referrer || 'nenhum'
     };
 
+    // Usando CORS padrão (sem no-cors) para que o Content-Type seja aceito pelo n8n
     fetch('https://webhook.cmbmidia.com.br/webhook/8345434d-1fc7-4124-94dd-fd1d30eb6171', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(n8nData),
-      mode: 'no-cors' // Garante que o envio ocorra mesmo se o n8n não retornar cabeçalhos CORS
     }).catch(err => console.error('Erro ao enviar para n8n:', err));
 
     // Small delay to let GTM fire its tags, then redirect
