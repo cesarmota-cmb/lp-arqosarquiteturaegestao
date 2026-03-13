@@ -14,8 +14,12 @@ const UTM_KEYS = [
   'utm_campaign',
   'utm_term',
   'utm_content',
-  'gclid',
-  'fbclid',
+  'gclid',            // Google Ads auto-tag
+  'gad_source',       // Google Ads source info
+  'gad_campaignid',   // Google Ads campaign ID
+  'gbraid',           // iOS tracking
+  'wbraid',           // iOS tracking
+  'fbclid',           // Meta Ads auto-tag
 ];
 
 const STORAGE_KEY = 'arqos_utm_params';
