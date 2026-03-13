@@ -27,21 +27,9 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
 
     const phoneDigits = telefone.replace(/\D/g, '');
 
-    // Build WhatsApp message with UTM data embedded (for N8N to parse)
-    const utmInfo = [
-      utms.utm_source ? `Origem: ${utms.utm_source}` : '',
-      utms.utm_medium ? `Mídia: ${utms.utm_medium}` : '',
-      utms.utm_campaign ? `Campanha: ${utms.utm_campaign}` : '',
-      utms.utm_term ? `Palavra-chave: ${utms.utm_term}` : '',
-      utms.utm_content ? `Anúncio: ${utms.utm_content}` : '',
-      utms.gclid ? `gclid: ${utms.gclid}` : '',
-      utms.fbclid ? `fbclid: ${utms.fbclid}` : '',
-    ].filter(Boolean).join(' | ');
-
     const message = [
       `Olá! Meu nome é ${nome}.`,
       `Gostaria de solicitar um orçamento.`,
-      utmInfo ? `[${utmInfo}]` : '',
     ].filter(Boolean).join('\n');
 
     // Fire GTM dataLayer event with all tracking data
