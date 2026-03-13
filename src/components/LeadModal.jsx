@@ -61,6 +61,23 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
       });
     }
 
+    // Enviar para o n8n da CMB Mídia (Tracking Completo antes do WhatsApp)
+    const n8nData = {
+      nome,
+      telefone: phoneDigits,
+      origem_sessao: source,
+      ...utms,
+      data_hora: new Date().toLocaleString('pt-BR'),
+      url_origem: window.location.href
+    };
+
+    fetch('https://webhook.cmbmidia.com.br/webhook/8345434d-1fc7-4124-94dd-fd1d30eb6171', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(n8nData),
+      mode: 'no-cors' // Garante que o envio ocorra mesmo se o n8n não retornar cabeçalhos CORS
+    }).catch(err => console.error('Erro ao enviar para n8n:', err));
+
     // Small delay to let GTM fire its tags, then redirect
     setTimeout(() => {
       const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
