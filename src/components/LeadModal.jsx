@@ -54,20 +54,10 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
       nome,
       telefone: phoneDigits,
       origem_sessao: source,
-      utm_source: utms.utm_source || 'direto',
-      utm_medium: utms.utm_medium || (utms.gclid ? 'cpc' : 'nenhum'),
-      utm_campaign: utms.utm_campaign || 'nenhuma',
-      utm_term: utms.utm_term || 'nenhum',
-      utm_content: utms.utm_content || 'nenhum',
-      gclid: utms.gclid || '',
-      gad_source: utms.gad_source || '',
-      gad_campaignid: utms.gad_campaignid || '',
-      gbraid: utms.gbraid || '',
-      wbraid: utms.wbraid || '',
-      fbclid: utms.fbclid || '',
+      ...utms, // Espalha todos os parâmetros (UTMs, GCLID, Referrer, etc.)
       data_hora: new Date().toLocaleString('pt-BR'),
       url_origem: window.location.href,
-      referrer: document.referrer || 'nenhum'
+      referrer_original: document.referrer || 'direto'
     };
 
     // Usando CORS padrão (sem no-cors) para que o Content-Type seja aceito pelo n8n

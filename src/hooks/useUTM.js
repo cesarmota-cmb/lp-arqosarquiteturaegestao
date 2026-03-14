@@ -50,17 +50,50 @@ const useUTM = () => {
 
   // 3. Fallback to Referrer (Organic Detection) if no UTMs found yet
   if (Object.keys(utms).length === 0) {
-    const ref = document.referrer;
+    const ref = document.referrer.toLowerCase();
+    
     if (!ref) {
       utms.utm_source = 'direto';
       utms.utm_medium = 'nenhum';
-    } else if (ref.includes('google.com')) {
+    } 
+    // AI Tools
+    else if (ref.includes('openai.com') || ref.includes('chatgpt.com')) {
+      utms.utm_source = 'ia';
+      utms.utm_medium = 'chatgpt';
+    } else if (ref.includes('claude.ai') || ref.includes('anthropic.com')) {
+      utms.utm_source = 'ia';
+      utms.utm_medium = 'claude';
+    } else if (ref.includes('perplexity.ai')) {
+      utms.utm_source = 'ia';
+      utms.utm_medium = 'perplexity';
+    }
+    // Search Engines
+    else if (ref.includes('google.')) {
       utms.utm_source = 'google';
       utms.utm_medium = 'organico';
-    } else if (ref.includes('facebook.com') || ref.includes('instagram.com')) {
-      utms.utm_source = 'social';
+    } else if (ref.includes('bing.com')) {
+      utms.utm_source = 'bing';
       utms.utm_medium = 'organico';
-    } else {
+    } else if (ref.includes('yahoo.com')) {
+      utms.utm_source = 'yahoo';
+      utms.utm_medium = 'organico';
+    }
+    // Social Media
+    else if (ref.includes('instagram.com') || ref.includes('l.instagram.com')) {
+      utms.utm_source = 'instagram';
+      utms.utm_medium = 'social';
+    } else if (ref.includes('facebook.com') || ref.includes('l.facebook.com')) {
+      utms.utm_source = 'facebook';
+      utms.utm_medium = 'social';
+    } else if (ref.includes('t.co') || ref.includes('twitter.com') || ref.includes('x.com')) {
+      utms.utm_source = 'x';
+      utms.utm_medium = 'social';
+    } else if (ref.includes('linkedin.com')) {
+      utms.utm_source = 'linkedin';
+      utms.utm_medium = 'social';
+    }
+    // Generic Referral
+    else {
       utms.utm_source = 'referencia';
       utms.utm_medium = 'referencia';
       utms.referrer_url = ref;
