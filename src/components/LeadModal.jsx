@@ -27,10 +27,7 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
 
     const phoneDigits = telefone.replace(/\D/g, '');
 
-    const message = [
-      `Olá! Meu nome é ${nome}.`,
-      `Gostaria de solicitar um orçamento.`,
-    ].filter(Boolean).join('\n');
+    const message = `Olá, vim do Google e gostaria de solicitar um orçamento para meu projeto.`;
 
     // Fire GTM dataLayer event with all tracking data
     if (window.dataLayer) {
