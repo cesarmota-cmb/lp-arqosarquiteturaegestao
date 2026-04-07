@@ -44,7 +44,7 @@ function AppV2() {
     }).catch(err => console.error('Erro ao enviar para n8n:', err));
 
     // 3. Open WhatsApp
-    const message = `Olá! Gostaria de solicitar um orçamento (visto na V2).`;
+    const message = `Olá, vim do Google e gostaria de solicitar um orçamento para meu projeto.`;
     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
   };
