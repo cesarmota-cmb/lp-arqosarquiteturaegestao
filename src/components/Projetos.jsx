@@ -22,11 +22,13 @@ const Projetos = () => {
       localizacao: 'Itajubá, MG',
       metragem: '305m²',
       descricao: 'Um verdadeiro refúgio urbano. O projeto da Casa Belo Horizonte explora a amplitude dos espaços integrados, criando uma conexão fluida entre as áreas de convívio e a paisagem externa. Linhas contemporâneas se misturam a texturas acolhedoras, garantindo uma atmosfera sofisticada e convidativa. Pensada para receber e celebrar a vida em família, a residência equilibra com perfeição elegância, conforto e funcionalidade.',
-      image: '/images/projects/casa-belo-horizonte/1.jpg',
+      image: '/images/projects/casa-belo-horizonte/01_1 - Photo.webp',
       gallery: [
-        '/images/projects/casa-belo-horizonte/2.jpg',
-        '/images/projects/casa-belo-horizonte/3.jpg',
-        '/images/projects/casa-belo-horizonte/4.jpg'
+        '/images/projects/casa-belo-horizonte/01_2 - Photo.webp',
+        '/images/projects/casa-belo-horizonte/01_3 - Photo.webp',
+        '/images/projects/casa-belo-horizonte/01_4 - Photo.webp',
+        '/images/projects/casa-belo-horizonte/01_5 - Photo.webp',
+        '/images/projects/casa-belo-horizonte/01_7 - Photo.webp'
       ]
     },
     {
@@ -36,11 +38,12 @@ const Projetos = () => {
       localizacao: 'Itajubá, MG',
       metragem: '230,34m²',
       descricao: 'A Casa Encosta prova que a arquitetura deve dialogar com a natureza. Implantada de forma inteligente para respeitar e abraçar a topografia do terreno, o projeto se apropria do desnível para criar ambientes surpreendentes, garantindo vistas privilegiadas e farta iluminação natural. O design arrojado valoriza a harmonia entre o moderno e o orgânico, oferecendo uma experiência de moradia única onde a casa e o terreno se tornam um só.',
-      image: '/images/projects/casa-encosta/1.jpg',
+      image: '/images/projects/casa-encosta/1_1 - Photo.jpg',
       gallery: [
-        '/images/projects/casa-encosta/2.jpg',
-        '/images/projects/casa-encosta/3.jpg',
-        '/images/projects/casa-encosta/4.jpg'
+        '/images/projects/casa-encosta/1_2 - Photo.jpg',
+        '/images/projects/casa-encosta/1_3 - Photo.jpg',
+        '/images/projects/casa-encosta/1_4 - Photo.jpg',
+        '/images/projects/casa-encosta/1_5 - Photo.jpg'
       ]
     },
     {
@@ -50,10 +53,12 @@ const Projetos = () => {
       localizacao: 'Itajubá, MG',
       metragem: '96m²',
       descricao: 'Pequeno na metragem, imenso na personalidade e no charme. O Chalé Nobre foi concebido para ser um santuário de aconchego. O projeto maximiza cada espaço através de soluções inteligentes e integração cuidadosa dos ambientes. Materiais nobres, iluminação estratégica e um foco absoluto no conforto térmico e visual transformam este chalé em um refúgio acolhedor, perfeito para desacelerar e colecionar momentos especiais.',
-      image: '/images/projects/chale-nobre/1.jpg',
+      image: '/images/projects/chale-nobre/01_1 - Photo.webp',
       gallery: [
-        '/images/projects/chale-nobre/2.jpg',
-        '/images/projects/chale-nobre/3.jpg'
+        '/images/projects/chale-nobre/01_2 - Photo.webp',
+        '/images/projects/chale-nobre/01_4 - Photo.webp',
+        '/images/projects/chale-nobre/01_5 - Photo.webp',
+        '/images/projects/chale-nobre/01_7 - Photo.webp'
       ]
     },
     {
