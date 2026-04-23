@@ -81,7 +81,7 @@ const Projetos = () => {
     },
     {
       id: 'chale-nobre',
-      tipo: 'Residencial',
+      tipo: 'Chalé',
       titulo: 'Chalé Nobre',
       localizacao: 'Itajubá, MG',
       metragem: '96m²',
