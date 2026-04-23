@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useUTM from '../hooks/useUTM';
 import './LeadModal.css';
 
@@ -9,6 +9,18 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
   const [telefone, setTelefone] = useState('');
   const [loading, setLoading] = useState(false);
   const utms = useUTM();
+
+  // Impede o scroll do body quando o modal está aberto
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 

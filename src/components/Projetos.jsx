@@ -14,7 +14,37 @@ const Projetos = () => {
       });
     }
   };
+
+  // Impede o scroll do body quando o modal está aberto
+  useEffect(() => {
+    if (activeProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeProject]);
   const projetos = [
+    {
+      id: 'casa-porto',
+      tipo: 'Residencial',
+      titulo: 'Casa Porto',
+      localizacao: 'Itajubá, MG',
+      metragem: '334,76m²',
+      descricao: 'A Casa Porto é um monumento à arquitetura moderna e à funcionalidade em grande escala. O projeto se destaca por sua volumetria imponente e o uso magistral de grandes vãos e transparências, criando um senso de liberdade e continuidade entre os espaços. Materiais contemporâneos, iluminação estratégica e uma planta que prioriza o convívio fazem desta residência um ícone de sofisticação e bem-estar.',
+      image: '/images/projects/casa-porto/LKRS-2.webp',
+      gallery: [
+        '/images/projects/casa-porto/LKRS-4.webp',
+        '/images/projects/casa-porto/LKRS-6.webp',
+        '/images/projects/casa-porto/LKRS-8.webp',
+        '/images/projects/casa-porto/LKRS-14.webp',
+        '/images/projects/casa-porto/LKRS-17.webp',
+        '/images/projects/casa-porto/LKRS-21.webp',
+        '/images/projects/casa-porto/LKRS-28.webp'
+      ]
+    },
     {
       id: 'casa-belo-horizonte',
       tipo: 'Residencial',
