@@ -10,15 +10,18 @@ const LeadModal = ({ isOpen, onClose, source = 'geral' }) => {
   const [loading, setLoading] = useState(false);
   const utms = useUTM();
 
-  // Impede o scroll do body quando o modal está aberto
+  // Impede o scroll do body e html quando o modal está aberto
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     }
     return () => {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     };
   }, [isOpen]);
 
